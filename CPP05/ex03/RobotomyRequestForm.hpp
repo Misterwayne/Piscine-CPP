@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/11 16:48:45 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 20:30:27 by mwane            ###   ########.fr       */
+/*   Created: 2022/05/19 20:46:46 by mwane             #+#    #+#             */
+/*   Updated: 2022/05/19 21:00:50 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SHRUBBERY_HPP
-# define SHRUBBERY_HPP
+# ifndef ROBOTOMY_HPP
+# define ROBOTOMY_HPP
 #include <fstream>
+#include <math.h>
 #include "Form.hpp"
 
-class ShrubberyCreationForm : public Form
+class RobotomyRequestForm : public Form
 {
     public :
-        ShrubberyCreationForm(const std::string &target = "default");
-        virtual ~ShrubberyCreationForm();
-        ShrubberyCreationForm(const ShrubberyCreationForm & copy);
-        ShrubberyCreationForm& operator=(ShrubberyCreationForm & copy);
+        RobotomyRequestForm(const std::string &target = "default");
+        virtual ~RobotomyRequestForm();
+        RobotomyRequestForm(const RobotomyRequestForm & copy);
+        RobotomyRequestForm& operator=(RobotomyRequestForm & copy);
 
         const std::string &getTarget() const;
-        void              shurbberyCreation() const;
         virtual void      execute(const Bureaucrat & executor) const;
+        void              robotomyRequest() const;
     
     private :
         std::string     _target;

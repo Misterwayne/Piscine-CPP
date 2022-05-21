@@ -6,7 +6,7 @@
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:45:30 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 21:10:37 by mwane            ###   ########.fr       */
+/*   Updated: 2022/05/21 12:40:55 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Bureaucrat
 
 		Bureaucrat&         operator=(Bureaucrat & copy);
 		int                 get_grade() const;
-		const std::string&  get_name() const;
+		const std::string	get_name() const;
 		void                UpGrade();
 		void                DownGrade();
 		void				signForm(Form &paper);

@@ -6,7 +6,7 @@
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 15:48:22 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 21:15:58 by mwane            ###   ########.fr       */
+/*   Updated: 2022/05/21 12:47:19 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -21,33 +22,34 @@ int main(void)
     Bureaucrat b = Bureaucrat("Mgaber", 100);
     Bureaucrat l = Bureaucrat("Jean", 10);
     Bureaucrat t = Bureaucrat("Jena-Pierre", 2);
-    ShrubberyCreationForm p = ShrubberyCreationForm("test");
-    RobotomyRequestForm x = RobotomyRequestForm("boss");
-    PresidentialPardonForm z = PresidentialPardonForm("Papacito");
+    Intern lol;
+    Form* p = lol.makeForm("shrubbery creation","test");
+    Form* x = lol.makeForm("robotomy request","boss");
+    Form* z = lol.makeForm("presidential pardon","Papacito");
 
     std::cout << j;
     std::cout << b;
     std::cout << l;
     std::cout << t;
-    std::cout << p;
+    std::cout << *p;
 
-    b.signForm(p);
-    l.signForm(x);
-    t.signForm(z);
-    std::cout << p;
+    b.signForm(*p);
+    l.signForm(*x);
+    t.signForm(*z);
+    std::cout << *p;
     try {
-        p.beSigned(b);
+        p->beSigned(b);
     }
     catch (std::exception & e)
     {
         std::cerr<< e.what();
     }
-    l.signForm(p);
-    std::cout << p;
-    std::cout << x;
-    std::cout << x;
-    p.execute(t);
-    z.execute(t);
-    t.executeForm(x);
+    l.signForm(*p);
+    std::cout << *p;
+    std::cout << *x;
+    std::cout << *x;
+    p->execute(t);
+    z->execute(t);
+    t.executeForm(*x);
     return (0);
 }

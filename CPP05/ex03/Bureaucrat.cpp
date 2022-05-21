@@ -6,7 +6,7 @@
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:03:17 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 21:15:08 by mwane            ###   ########.fr       */
+/*   Updated: 2022/05/21 12:45:27 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Bureaucrat::~Bureaucrat()
 
 }
 
-const std::string&     Bureaucrat::get_name() const
+const std::string     Bureaucrat::get_name() const
 {
 	return (_name);
 }
@@ -57,7 +57,7 @@ void			Bureaucrat::signForm(Form &paper)
 	}
 	else if (_grade >= paper.get_sgrade())
 	{
-		std::cout << _name << " couldn't sign " << paper.get_name()
+		std::cout<< this->_name << " couldn't sign " << paper.get_name()
 		<< " because " << _grade << " < " << paper.get_sgrade()<<std::endl;
 	}
 }

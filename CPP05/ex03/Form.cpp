@@ -6,7 +6,7 @@
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:27:00 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 20:40:00 by mwane            ###   ########.fr       */
+/*   Updated: 2022/05/21 12:54:39 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,12 @@ const char* Form::UnsignedExep::what() const throw()
 
 std::ostream& operator<<(std::ostream& output, Form& form)
 {
-	output << "Form : "<< form.get_name() << "\ngrade to signed :" << form.get_sgrade()
-    << "\ngrade to exec :" << form.get_egrade()
-    << "\nis signed :" << form.get_status() <<std::endl;
+	output <<"_____________________________________\n";
+	output << std::setw(10) <<"Form : "<< form.get_name() ;
+	output << std::setw(10) <<"\ngrade to signed :" << form.get_sgrade();
+    output << std::setw(10) <<"\ngrade to exec :" << form.get_egrade();
+    output << std::setw(10) <<"\nis signed :" << form.get_status() <<std::endl;
+	output <<"--------------------------------------\n";
 	return (output);
 }
 

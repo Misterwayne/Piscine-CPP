@@ -6,7 +6,7 @@
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:19:47 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 20:40:26 by mwane            ###   ########.fr       */
+/*   Updated: 2022/05/21 12:52:21 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FORM_HPP
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;

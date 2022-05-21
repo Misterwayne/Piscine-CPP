@@ -6,7 +6,7 @@
 #    By: mwane <mwane@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 17:26:35 by mwane             #+#    #+#              #
-#    Updated: 2022/05/19 21:08:13 by mwane            ###   ########.fr        #
+#    Updated: 2022/05/19 22:01:11 by mwane            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ SRCS 	= main.cpp \
 		  Bureaucrat.cpp \
 		  ShrubberyCreationForm.cpp \
 		  RobotomyRequestForm.cpp \
-		  PresidentialPardonForm.cpp
+		  PresidentialPardonForm.cpp\
+		  Intern.cpp
 
 FLAGS 	= -Wall -Werror -Wextra -std=c++98
 

@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwane <mwane@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/11 16:48:45 by mwane             #+#    #+#             */
-/*   Updated: 2022/05/19 20:30:27 by mwane            ###   ########.fr       */
+/*   Created: 2022/05/19 21:01:48 by mwane             #+#    #+#             */
+/*   Updated: 2022/05/19 21:08:31 by mwane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SHRUBBERY_HPP
-# define SHRUBBERY_HPP
+# ifndef PRESIDENT_HPP
+# define PRESIDENT_HPP
 #include <fstream>
+#include <math.h>
 #include "Form.hpp"
 
-class ShrubberyCreationForm : public Form
+class PresidentialPardonForm : public Form
 {
     public :
-        ShrubberyCreationForm(const std::string &target = "default");
-        virtual ~ShrubberyCreationForm();
-        ShrubberyCreationForm(const ShrubberyCreationForm & copy);
-        ShrubberyCreationForm& operator=(ShrubberyCreationForm & copy);
+        PresidentialPardonForm(const std::string &target = "default");
+        virtual ~PresidentialPardonForm();
+        PresidentialPardonForm(const PresidentialPardonForm & copy);
+        PresidentialPardonForm& operator=(PresidentialPardonForm & copy);
 
         const std::string &getTarget() const;
-        void              shurbberyCreation() const;
         virtual void      execute(const Bureaucrat & executor) const;
+        void              presidentialPardon() const;
     
     private :
         std::string     _target;
